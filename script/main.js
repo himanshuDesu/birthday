@@ -1,14 +1,18 @@
 // Animation Timeline
+
 const animationTimeline = () => {
   // Spit chars that needs to be animated individually
+  
   const textBoxChars = document.getElementsByClassName("hbd-chatbox")[0];
-  const hbday = document.getElementsByClassName("wish-hbd")[0];
-
+  const hbd = document.getElementsByClassName("wish-hbd")[0];
+  
+ 
+  
   textBoxChars.innerHTML = `<span>${textBoxChars.innerHTML
     .split("")
     .join("</span><span>")}</span`;
 
-  hbday.innerHTML = `<span>${hbd.innerHTML
+  hbd.innerHTML = `<span>${hbd.innerHTML
     .split("")
     .join("</span><span>")}</span`;
 
@@ -299,6 +303,7 @@ const fetchData = () => {
 const resolveFetch = () => {
   return new Promise((resolve, reject) => {
     fetchData();
+   
     resolve("Fetch done!");
   });
 };
